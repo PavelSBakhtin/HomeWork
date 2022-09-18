@@ -41,4 +41,4 @@ else
 Console.WriteLine("Goodbye");
 Console.WriteLine("press any key to exit");
 string user_key = Console.ReadLine();
-Console.WriteLine(user_key);
+Console.Write(user_key);
