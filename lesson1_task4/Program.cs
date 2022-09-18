@@ -1,18 +1,15 @@
-﻿int a = 2;
-int b = 3;
-int c = 7;
-int max = a;
+﻿Console.WriteLine("Введите три любых целых числа");
+int user_numberA = int.Parse(Console.ReadLine());
+int user_numberB = int.Parse(Console.ReadLine());
+int user_numberC = int.Parse(Console.ReadLine());
+int max = user_numberA;
 
-Console.WriteLine("We have: " + a + " and " + b + " and " + c);
-Console.WriteLine("Which of these max ?");
-
-if (b > max)
+if (user_numberB > max)
 {
-    max = b;
+    max = user_numberB;
 }
-if (c > max)
+if (user_numberC > max)
 {
-    max = c;
+    max = user_numberC;
 }
-
-Console.WriteLine(max);
+Console.WriteLine("max = " + max);
