@@ -37,3 +37,8 @@ else
     Console.WriteLine("Вы проиграли :( Секретное число было: " + secret_number);
     Console.WriteLine("Попробуйте ещё раз :)");
 }
+
+Console.WriteLine("Goodbye");
+Console.WriteLine("press any key to exit");
+string user_key = Console.ReadLine();
+Console.WriteLine(user_key);
