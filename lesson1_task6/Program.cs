@@ -1,13 +1,13 @@
-﻿int a = 4;
+﻿Console.WriteLine("Введите любое целое число");
+int user_number = int.Parse(Console.ReadLine());
 
-Console.WriteLine("We have: " + a);
-Console.WriteLine("This number is even ?");
-
-if (a % 2 == 0)
+if (user_number % 2 == 0)
 {
+    Console.WriteLine("This number is even ?");
     Console.WriteLine("YES");
 }
-if (a % 2 != 0)
+if (user_number % 2 != 0)
 {
+    Console.WriteLine("This number is even ?");
     Console.WriteLine("NO");
 }
