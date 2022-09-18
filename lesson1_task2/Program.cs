@@ -6,9 +6,13 @@ if (user_numberA > user_numberB)
 {
     Console.Write("max = ");
     Console.WriteLine(user_numberA);
+    Console.Write("min = ");
+    Console.WriteLine(user_numberB);
 }
 else
 {
     Console.Write("max = ");
     Console.WriteLine(user_numberB);
+    Console.Write("min = ");
+    Console.WriteLine(user_numberA);
 }
