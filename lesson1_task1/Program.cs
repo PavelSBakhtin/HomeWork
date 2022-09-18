@@ -8,8 +8,8 @@ while (attempt > 0)
 {
     Console.WriteLine("Введите число от 1 до 9");
     int user_number = int.Parse(Console.ReadLine());
-    // Console.WriteLine(user_number);
-    if (user_number > secret_number)
+
+        if (user_number > secret_number)
     {
         Console.WriteLine("Секретное число меньше");
         attempt--;
@@ -41,4 +41,3 @@ else
 Console.WriteLine("Goodbye");
 Console.WriteLine("press any key to exit");
 string user_key = Console.ReadLine();
-// Console.Write(user_key);
