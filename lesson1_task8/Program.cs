@@ -3,7 +3,7 @@ int user_number = int.Parse(Console.ReadLine());
 int x = 1;
 
 Console.WriteLine("Все чётные числа от 1 до " + user_number + ":");
-while (x < user_number)
+while (x <= user_number)
 {
     if (x % 2 == 0)
     {
