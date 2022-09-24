@@ -49,7 +49,21 @@ void Mission21()
 }
 void Mission23()
 {
-    // task 23
+    Console.WriteLine("Enter any integer greater than 1:");
+    int user_num = int.Parse(Console.ReadLine());
+
+    if (user_num > 0)
+    {
+        Console.WriteLine("sheet of cubes of numbers from 1 to " + user_num);
+        for (int a = 1; a <= user_num; a++)
+        {
+            Console.WriteLine(Math.Pow(a, 3));
+        }
+    }
+    else
+    {
+        Console.WriteLine("you entered the wrong number");
+    }
 }
 
 Console.WriteLine("Enter the number of task:");
