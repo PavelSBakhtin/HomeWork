@@ -33,7 +33,19 @@
 }
 void Mission21()
 {
-    // task 21
+    Console.WriteLine("enter values for point A:");
+    int Xa = int.Parse(Console.ReadLine());
+    int Ya = int.Parse(Console.ReadLine());
+    int Za = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("enter values for point B:");
+    int Xb = int.Parse(Console.ReadLine());
+    int Yb = int.Parse(Console.ReadLine());
+    int Zb = int.Parse(Console.ReadLine());
+
+    double result = Math.Sqrt(Math.Pow((Xa - Xb), 2) + Math.Pow((Ya - Yb), 2) + Math.Pow((Za - Zb), 2));
+    result = Math.Round(result, 2);
+    Console.WriteLine("distance AB is: " + result);
 }
 void Mission23()
 {
