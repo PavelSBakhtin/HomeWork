@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("Введите любое целое число");
-int user_number = int.Parse(Console.ReadLine());
+int user_number = int.Parse(Console.ReadLine()??"0");
 
 if (user_number % 2 == 0)
 {
