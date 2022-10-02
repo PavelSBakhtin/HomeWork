@@ -13,4 +13,7 @@ void Function3()
 {
     Console.WriteLine(3);
 }
+
+Function1();
 Function2();
+Function3();
