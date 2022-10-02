@@ -38,3 +38,6 @@ Console.WriteLine(DateTime.Now - t1);
 DateTime t2 = DateTime.Now;
 PrintData("Number of digits in number N equals: " + num + " = ", resultLog);
 Console.WriteLine(DateTime.Now - t2);
+
+// PrintData("Number of digits in number N equals: " + num + " = ", CountDigitLog(ReadData("Enter number N: ")));
+// - это решение в одну строку (для более продвинутых пользователей, как бы)
