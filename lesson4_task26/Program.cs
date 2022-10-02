@@ -27,6 +27,11 @@ int CountDigitLog(int num)
     return countLog;
 }
 
+int CountDigitString(int num) // число станет строкой, и более как число не будет таковым являться
+{
+    return num.ToString().Length;
+}
+
 int num = ReadData("Enter number N: ");
 int resultSimple = CountDigitNum(num);
 int resultLog = CountDigitLog(num);
@@ -38,6 +43,10 @@ Console.WriteLine(DateTime.Now - t1);
 DateTime t2 = DateTime.Now;
 PrintData("Number of digits in number N equals: " + num + " = ", resultLog);
 Console.WriteLine(DateTime.Now - t2);
+
+DateTime t3 = DateTime.Now;
+PrintData("Number of digits in number N equals: " + num + " = ", CountDigitString(num));
+Console.WriteLine(DateTime.Now - t3);
 
 // PrintData("Number of digits in number N equals: " + num + " = ", CountDigitLog(ReadData("Enter number N: ")));
 // - это решение в одну строку (для более продвинутых пользователей, как бы)
