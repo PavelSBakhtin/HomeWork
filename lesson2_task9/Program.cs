@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("Enter first and last numbers to create an array:");
-int user_number = int.Parse(Console.ReadLine());
+int user_number = int.Parse(Console.ReadLine()??"0");
 int[] CreaterArrayNumber(int size)
 {
     int[] array = new int[size];
@@ -16,7 +16,7 @@ void WriteArray(int[] array)
         Console.Write(array[i] + " ");
     }
 }
-int[] numbers = CreaterArrayNumber(int.Parse(Console.ReadLine()));
+int[] numbers = CreaterArrayNumber(int.Parse(Console.ReadLine()??"0"));
 WriteArray(numbers);
 
 // Создание массива от 1 до n
@@ -39,5 +39,5 @@ WriteArray(numbers);
 //         Console.Write(array[i] + " ");
 //     }
 // }
-// int[] numbers = CreaterArrayNumber(int.Parse(Console.ReadLine()));
+// int[] numbers = CreaterArrayNumber(int.Parse(Console.ReadLine()??"0"));
 // WriteArray(numbers);
