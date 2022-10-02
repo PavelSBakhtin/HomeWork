@@ -1,7 +1,7 @@
 ﻿int ReadData(string msg)
 {
     Console.Write(msg);
-    int number = int.Parse(Console.ReadLine()??"0");
+    int number = int.Parse(Console.ReadLine() ?? "0");
     return number;
 }
 
@@ -29,7 +29,14 @@ int CountDigitLog(int num)
 
 int CountDigitString(int num) // число станет строкой, и более как число не будет таковым являться
 {
-    return num.ToString().Length;
+    if (num > 0)
+    {
+        return num.ToString().Length;
+    }
+    else
+    {
+        return num.ToString().Length - 1;
+    }
 }
 
 int num = ReadData("Enter number N: ");
