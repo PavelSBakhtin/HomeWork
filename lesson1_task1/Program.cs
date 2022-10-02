@@ -7,7 +7,7 @@ bool Win = false;
 while (attempt > 0)
 {
     Console.WriteLine("Введите число от 1 до 9");
-    int user_number = int.Parse(Console.ReadLine());
+    int user_number = int.Parse(Console.ReadLine()??"0");
 
         if (user_number > secret_number)
     {
@@ -40,4 +40,4 @@ else
 
 Console.WriteLine("Goodbye");
 Console.WriteLine("press any key to exit");
-string user_key = Console.ReadLine();
+string user_key = Console.ReadLine()??"0";
