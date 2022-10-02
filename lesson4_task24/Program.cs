@@ -1,7 +1,7 @@
 ﻿int ReadData(string msg)
 {
     Console.Write(msg);
-    int number = int.Parse(Console.ReadLine());
+    int number = int.Parse(Console.ReadLine() ?? "0");
     return number;
 }
 
