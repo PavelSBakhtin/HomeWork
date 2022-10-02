@@ -1,7 +1,7 @@
 ﻿Console.WriteLine("Введите три любых целых числа");
-int user_numberA = int.Parse(Console.ReadLine());
-int user_numberB = int.Parse(Console.ReadLine());
-int user_numberC = int.Parse(Console.ReadLine());
+int user_numberA = int.Parse(Console.ReadLine()??"0");
+int user_numberB = int.Parse(Console.ReadLine()??"0");
+int user_numberC = int.Parse(Console.ReadLine()??"0");
 int max = user_numberA;
 
 if (user_numberB > max)
