@@ -28,11 +28,13 @@ int CountDigitLog(int num)
 }
 
 int num = ReadData("Enter number N: ");
+int resultSimple = CountDigitNum(num);
+int resultLog = CountDigitLog(num);
 
 DateTime t1 = DateTime.Now;
-PrintData("Number of digits in number N equals: " + num + " = ", CountDigitNum(num));
+PrintData("Number of digits in number N equals: " + num + " = ", resultSimple);
 Console.WriteLine(DateTime.Now - t1);
 
 DateTime t2 = DateTime.Now;
-PrintData("Number of digits in number N equals: " + num + " = ", CountDigitLog(num));
+PrintData("Number of digits in number N equals: " + num + " = ", resultLog);
 Console.WriteLine(DateTime.Now - t2);
