@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("Введите любое целое число");
-int user_number = int.Parse(Console.ReadLine());
+int user_number = int.Parse(Console.ReadLine()??"0");
 int x = 1;
 
 Console.WriteLine("Все чётные числа от 1 до " + user_number + ":");
