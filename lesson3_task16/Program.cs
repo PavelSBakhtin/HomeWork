@@ -7,7 +7,7 @@
     return num;
 }
 
-int number = int.Parse(Console.ReadLine());
+int number = int.Parse(Console.ReadLine()??"0");
 if (number < 0) number *= -1;
 if (number > 99)
 {
