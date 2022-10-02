@@ -10,7 +10,7 @@
     }
 
     Console.WriteLine("enter a five-digit number:");
-    int number = int.Parse(Console.ReadLine());
+    int number = int.Parse(Console.ReadLine()??"0");
     if (number < 0) number *= -1;
     if (number > 9999 && number < 100000)
     {
@@ -34,14 +34,14 @@
 void Mission21()
 {
     Console.WriteLine("enter values for point A:");
-    int Xa = int.Parse(Console.ReadLine());
-    int Ya = int.Parse(Console.ReadLine());
-    int Za = int.Parse(Console.ReadLine());
+    int Xa = int.Parse(Console.ReadLine()??"0");
+    int Ya = int.Parse(Console.ReadLine()??"0");
+    int Za = int.Parse(Console.ReadLine()??"0");
 
     Console.WriteLine("enter values for point B:");
-    int Xb = int.Parse(Console.ReadLine());
-    int Yb = int.Parse(Console.ReadLine());
-    int Zb = int.Parse(Console.ReadLine());
+    int Xb = int.Parse(Console.ReadLine()??"0");
+    int Yb = int.Parse(Console.ReadLine()??"0");
+    int Zb = int.Parse(Console.ReadLine()??"0");
 
     double result = Math.Sqrt(Math.Pow((Xa - Xb), 2) + Math.Pow((Ya - Yb), 2) + Math.Pow((Za - Zb), 2));
     result = Math.Round(result, 2);
@@ -50,7 +50,7 @@ void Mission21()
 void Mission23()
 {
     Console.WriteLine("Enter any integer greater than 1:");
-    int user_num = int.Parse(Console.ReadLine());
+    int user_num = int.Parse(Console.ReadLine()??"0");
 
     if (user_num > 0)
     {
@@ -69,7 +69,7 @@ void Mission23()
 Console.WriteLine("Enter the number of task:");
 while (true)
 {
-    int user_number = int.Parse(Console.ReadLine());
+    int user_number = int.Parse(Console.ReadLine()??"0");
     if (user_number == 1)
     {
         Mission19();
