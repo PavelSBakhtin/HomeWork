@@ -5,24 +5,32 @@
     return number;
 }
 
-void PrintData(string msg, int value)
+void PrintData(string msg, double value) // для value не забыть сменить тип данных
 {
     Console.WriteLine(msg + value);
 }
 
+// double Factorial(int n)
+// {
+//     if (n == 1) return 1;
+//     else return n * Factorial(n - 1);
+// }
 
-
-
-
-
-
-double Factorial(int n)
+long Factor(int num)
 {
-    if (n == 1) return 1;
-    else return n * Factorial(n - 1);
+    long res = 1;
+    for (int i = 1; i <= num; i++)
+    {
+        res = res * i;
+    }
+    return res;
 }
 
-for (int i = 1; i < 40; i++)
-{
-    Console.WriteLine($"{i}! = {Factorial(i)}");
-}
+int num = ReadData("Enter number N: ");
+long outResult = Factor(num);
+PrintData("Factorial of number " + num + " equals: ", outResult);
+
+// for (int i = 1; i <= num; i++)
+// {
+//     Console.WriteLine($"{i}! = {Factorial(i)}");
+// }
