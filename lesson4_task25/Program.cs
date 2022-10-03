@@ -25,3 +25,5 @@ int numB = ReadData("Enter number B: ");
 
 int result = PowAtoB(numA, numB);
 PrintData($"{numA} ^ {numB} = ", result);
+
+// Math.Pow() в данной задаче не используется, так как исходя из её условий - решение через цикл
