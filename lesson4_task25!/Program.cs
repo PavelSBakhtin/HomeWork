@@ -8,7 +8,7 @@
 string ReadSing(string msg)
 {
     Console.Write(msg);
-    string sing = Console.ReadLine();
+    string sing = Console.ReadLine() ?? "0";
     return sing;
 }
 
