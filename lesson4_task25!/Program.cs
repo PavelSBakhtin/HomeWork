@@ -1,7 +1,7 @@
 ﻿double ReadData(string msg)
 {
     Console.Write(msg);
-    double number = double.Parse(Console.ReadLine()); // конструкция ??"0" нивелирует ошибку NULL
+    double number = double.Parse(Console.ReadLine() ?? "0"); // конструкция ??"0" нивелирует ошибку NULL
     return number;
 }
 
