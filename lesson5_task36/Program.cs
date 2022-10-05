@@ -39,8 +39,8 @@ void PrintSum(int[] array)
 }
 
 int arrayLength = ReadData("Enter the length of the array: ");
-int min = new Random().Next(-9, 10);
-int max = new Random().Next(10, 99);
+int min = new Random().Next(-10, 10);
+int max = new Random().Next(10, 100);
 int[] array = Fill1DArray(arrayLength, min, max);
 Print1DArray(array);
 Console.WriteLine("Sum of elements in odd positions: ");
