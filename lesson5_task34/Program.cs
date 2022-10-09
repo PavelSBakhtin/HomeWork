@@ -1,11 +1,11 @@
-﻿int ReadData(string msg)
+﻿int ReadData(string msg) // Принимает данные от пользователя.
 {
     Console.Write(msg);
     int number = int.Parse(Console.ReadLine() ?? "0"); // конструкция ??"0" нивелирует ошибку NULL
     return number;
 }
 
-int[] Fill1DArray(int length, int lowBord, int highBord)
+int[] Fill1DArray(int length, int lowBord, int highBord) // Создание одномерного массива.
 {
     int[] array = new int[length];
     for (int i = 0; i < length; i++)
@@ -15,7 +15,7 @@ int[] Fill1DArray(int length, int lowBord, int highBord)
     return array;
 }
 
-void Print1DArray(int[] array)
+void Print1DArray(int[] array) // Печать одномерного массива.
 {
     Console.Write("[");
     for (int i = 0; i < array.Length - 1; i++)
@@ -25,7 +25,7 @@ void Print1DArray(int[] array)
     Console.WriteLine(array[array.Length - 1] + "]");
 }
 
-void PrintEven(int[] array)
+void PrintEven(int[] array) // Вывод чётные данные из массива.
 {
     int count = 0;
     for (int j = 0; j < array.Length; j++)
