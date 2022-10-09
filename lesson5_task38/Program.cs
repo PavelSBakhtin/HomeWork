@@ -1,4 +1,4 @@
-﻿int ReadData(string msg)
+﻿int ReadData(string msg) // Принимает данные от пользователя.
 {
     Console.Write(msg);
     int number = int.Parse(Console.ReadLine() ?? "0"); // конструкция ??"0" нивелирует ошибку NULL
