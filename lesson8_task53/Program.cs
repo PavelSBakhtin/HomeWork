@@ -29,7 +29,7 @@ int[] GoodArray(int[,] matrix, int[] array)
     return arrOut;
 }
 
-int[] array = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+int[] array = Console.ReadLine()!.Split(" ").Select(x => int.Parse(x)).ToArray();
 
 int[] good = GoodArray(GetArray(6, 6, -10, 11), array);
 
