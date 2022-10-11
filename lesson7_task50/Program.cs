@@ -5,9 +5,10 @@
     return numbers;
 }
 
-void PrintData(string msg)
+void PrintData(string msg, int value)
 {
-    Console.WriteLine(msg);
+    if (value == 0) Console.WriteLine(msg);
+    else Console.WriteLine(msg + value);
 }
 
 void FillArray(int[,] matrixNew)
@@ -31,6 +32,7 @@ void PrintArray(int[,] matrixNew)
         }
         Console.WriteLine();
     }
+    Console.WriteLine();
 }
 
 string index = ReadData("Enter the index of number: ");
@@ -39,16 +41,16 @@ int x = new Random().Next(4, 10);
 int[,] matrix = new int[y, x];
 FillArray(matrix);
 PrintArray(matrix);
-Console.WriteLine();
 string[] array = index.Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
 int yNew = int.Parse(array[0]);
 int xNew = int.Parse(array[1]);
 
 if (yNew < y && xNew < x)
 {
-    Console.WriteLine(matrix[yNew,xNew] + "\t");
+    PrintData("Number in array by user index: ", matrix[yNew, xNew]);
 }
 else
 {
-    PrintData("This index is incorrect");
+    int q = 0;
+    PrintData("User index is incorrect", q);
 }
