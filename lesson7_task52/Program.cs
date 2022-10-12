@@ -30,7 +30,7 @@ void PrintArray(int[,] matrixNew)
 
 string Average(int[,] getMatrix, int row, int column)
 {
-    int sum = 0;
+    double sum = 0;
     double average = 0;
     string result = string.Empty;
     for (int j = 0; j < row; j++)
@@ -40,7 +40,7 @@ string Average(int[,] getMatrix, int row, int column)
             sum += getMatrix[i, j];
         }
         average = sum / row;
-        average = Math.Round(average, 2);
+        average = Math.Round(average, 1);
         result += String.Join(" ", $"{average.ToString()}; ");
         average = 0;
         sum = 0;
@@ -54,13 +54,3 @@ int[,] matrix = new int[y, x];
 FillArray(matrix);
 PrintArray(matrix);
 PrintData("Average of each column: ", Average(matrix, x, y));
-
-// double a = 5.3132546;
-// string result = string.Empty;
-// for (int i = 0; i < 4; i++)
-// {
-//     a += 1;
-//     a = Math.Round(a, 1);
-//     result += String.Join(" ", $"{a.ToString()}; ");
-// }
-// Console.WriteLine(result);
