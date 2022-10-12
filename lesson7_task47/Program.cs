@@ -28,8 +28,8 @@ void PrintArray(double[,] matrixNew)
     }
 }
 
-int y = ReadData("Enter the number of lines: "); // for example 3
-int x = ReadData("Enter the number of columns: "); // for example 4
+int y = ReadData("Enter the number of lines: ");
+int x = ReadData("Enter the number of columns: ");
 double[,] matrix = new double[y, x];
 FillArray(matrix);
 Console.WriteLine();
