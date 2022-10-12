@@ -1,13 +1,6 @@
-﻿// string ReadData(string msg)
-// {
-//     Console.Write(msg);
-//     string numbers = Console.ReadLine() ?? "0";
-//     return numbers;
-// }
-
-void PrintData(string msg)
+﻿void PrintData(string msg, string averages)
 {
-    Console.WriteLine(msg);
+    Console.WriteLine(msg + averages);
 }
 
 void FillArray(int[,] matrixNew)
@@ -16,13 +9,14 @@ void FillArray(int[,] matrixNew)
     {
         for (int j = 0; j < matrixNew.GetLength(1); j++)
         {
-            matrixNew[i, j] = new Random().Next(-9, 10);
+            matrixNew[i, j] = new Random().Next(1, 10);
         }
     }
 }
 
 void PrintArray(int[,] matrixNew)
 {
+    Console.WriteLine();
     for (int i = 0; i < matrixNew.GetLength(0); i++)
     {
         for (int j = 0; j < matrixNew.GetLength(1); j++)
@@ -31,24 +25,42 @@ void PrintArray(int[,] matrixNew)
         }
         Console.WriteLine();
     }
+    Console.WriteLine();
 }
 
-// string index = ReadData("Enter the index of number: ");
+string Average(int[,] getMatrix, int row, int column)
+{
+    int sum = 0;
+    double average = 0;
+    string result = string.Empty;
+    for (int j = 0; j < row; j++)
+    {
+        for (int i = 0; i < column; i++)
+        {
+            sum += getMatrix[i, j];
+        }
+        average = sum / row;
+        average = Math.Round(average, 2);
+        result += String.Join(" ", $"{average.ToString()}; ");
+        average = 0;
+        sum = 0;
+    }
+    return result;
+}
+
 int y = new Random().Next(3, 10);
 int x = new Random().Next(4, 10);
 int[,] matrix = new int[y, x];
 FillArray(matrix);
 PrintArray(matrix);
-// Console.WriteLine();
-string[] array = index.Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
-int yNew = int.Parse(array[0]);
-int xNew = int.Parse(array[1]);
+PrintData("Average of each column: ", Average(matrix, x, y));
 
-if (yNew < y && xNew < x)
-{
-    Console.WriteLine(matrix[yNew, xNew]);
-}
-else
-{
-    PrintData("This index is incorrect");
-}
+// double a = 5.3132546;
+// string result = string.Empty;
+// for (int i = 0; i < 4; i++)
+// {
+//     a += 1;
+//     a = Math.Round(a, 1);
+//     result += String.Join(" ", $"{a.ToString()}; ");
+// }
+// Console.WriteLine(result);
