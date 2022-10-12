@@ -42,6 +42,8 @@ int[,] matrix = new int[y, x];
 FillArray(matrix);
 PrintArray(matrix);
 string[] array = index.Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+// это уберёт все запятые и пробелы; если в {} не указать пробел или далее не использовать
+// StringSplitOptions.RemoveEmptyEntries, то dotnet выдаст ошибку
 int yNew = int.Parse(array[0]);
 int xNew = int.Parse(array[1]);
 
