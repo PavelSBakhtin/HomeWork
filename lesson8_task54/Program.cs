@@ -59,4 +59,4 @@ int x = new Random().Next(4, 10);
 int[,] matrix = new int[y, x];
 FillArray(matrix);
 PrintArray(matrix);
-PrintData("Average of each column: ", Average(matrix, x, y));
+// PrintData("Average of each column: ", Average(matrix, x, y));
