@@ -1,9 +1,9 @@
 ﻿// Задача 54: Задайте двумерный массив.
 // Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
 
-void PrintData(string msg, string averages)
+void PrintData(string msg)
 {
-    Console.WriteLine(msg + averages);
+    Console.WriteLine(msg);
 }
 
 void FillArray(int[,] matrixNew)
@@ -32,26 +32,23 @@ void PrintArray(int[,] matrixNew)
     Console.WriteLine();
 }
 
-string Average(int[,] getMatrix, int row, int column)
+int[,] SelectionSort(int[,] array)
 {
-    double sum = 0;
-    double average = 0;
-    string result = string.Empty;
-    for (int j = 0; j < row; j++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int i = 0; i < column; i++)
+        for (int j = 0; j < array.GetLength(1) - 1; j++)
         {
-            sum += getMatrix[i, j];
+            int maxPosition = array[i, j];
+            for (int k = 0; k < array.GetLength(1); k++)
+            {
+                if (array[i, k] > maxPosition) maxPosition = array[i, k];
+            }
+            int temporary = array[i, j];
+            array[i, j] = maxPosition;
+            maxPosition = temporary;
         }
-        average = sum / row;
-        average = Math.Round(average, 1);
-        if (j != row - 1) result += $"{average.ToString()}; ";
-        else result += $"{average.ToString()}. ";
-        // result += String.Join("", $"{average.ToString()}; "); - первое решение.
-        average = 0;
-        sum = 0;
     }
-    return result;
+    return array;
 }
 
 int y = new Random().Next(3, 10);
@@ -59,4 +56,6 @@ int x = new Random().Next(4, 10);
 int[,] matrix = new int[y, x];
 FillArray(matrix);
 PrintArray(matrix);
-// PrintData("Average of each column: ", Average(matrix, x, y));
+PrintData("The elements of each row are sorted in descending order:");
+int[,] newMatrix = SelectionSort(matrix);
+PrintArray(newMatrix);
