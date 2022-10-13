@@ -36,16 +36,20 @@ int[,] SelectionSort(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(1) - 1; j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            int maxPosition = array[i, j];
-            for (int k = 0; k < array.GetLength(1); k++)
+            for (int count = 0; count < array.GetLength(1); count++)
             {
-                if (array[i, k] > maxPosition) maxPosition = array[i, k];
+                for (int k = 0; k < array.GetLength(1) - 1; k++)
+                {
+                    if (array[i, k] < array[i, k + 1])
+                    {
+                        int temporary = array[i, k];
+                        array[i, k] = array[i, k + 1];
+                        array[i, k + 1] = temporary;
+                    }
+                }
             }
-            int temporary = array[i, j];
-            array[i, j] = maxPosition;
-            maxPosition = temporary;
         }
     }
     return array;
