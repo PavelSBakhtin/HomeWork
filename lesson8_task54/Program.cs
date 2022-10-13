@@ -34,17 +34,17 @@ void PrintArray(int[,] matrixNew)
 
 int[,] SelectionSort(int[,] array)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++) // все следующие циклы построчно
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++) // все следующие циклы в каждой строке
         {
-            for (int count = 0; count < array.GetLength(1); count++)
+            for (int count = 0; count < array.GetLength(1); count++) // счетчик чисел в строке
             {
-                for (int k = 0; k < array.GetLength(1) - 1; k++)
+                for (int k = 0; k < array.GetLength(1) - 1; k++) // сдвигает меньшее число вправо
                 {
-                    if (array[i, k] < array[i, k + 1])
+                    if (array[i, k] < array[i, k + 1]) // сравнение текущего числа с правым
                     {
-                        int temporary = array[i, k];
+                        int temporary = array[i, k]; // меняет местами текущее число с правым
                         array[i, k] = array[i, k + 1];
                         array[i, k + 1] = temporary;
                     }
