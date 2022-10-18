@@ -32,7 +32,7 @@ void PrintArray(int[,] matrixNew)
     Console.WriteLine();
 }
 
-int[,] Multiplication(int[,] array1, int[,] array2)
+int[,] Multiplication(int[,] array1, int[,] array2) // перемножение двух матриц
 {
     int[,] newArray = new int[array1.GetLength(0), array2.GetLength(1)];
     for (int i = 0; i < array1.GetLength(0); i++)
