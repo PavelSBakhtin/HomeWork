@@ -36,7 +36,8 @@ int SelectionNum(int[,] array)
 {
     int num = 0;
     int max = 0;
-    int[] maxRow = new int[0];
+    int min = 0;
+    int[] minRow = new int[0];
 
     for (int i = 0; i < array.GetLength(0); i++) // находит суммы по всем строкам
     {
@@ -45,18 +46,24 @@ int SelectionNum(int[,] array)
         {
             sum = sum + array[i, j];
         }
-        Array.Resize(ref maxRow, maxRow.Length + 1);
-        maxRow[maxRow.Length - 1] = sum;
+        Array.Resize(ref minRow, minRow.Length + 1);
+        minRow[minRow.Length - 1] = sum;
     }
 
-    for (int k = 0; k < maxRow.Length; k++) // находит наибольшую сумму
+    for (int k = 0; k < minRow.Length; k++) // находит наибольшую сумму
     {
-        if (maxRow[k] > max) max = maxRow[k];
+        if (minRow[k] > max) max = minRow[k];
+        min = minRow[k];
     }
 
-    while (num < maxRow.Length)
+    for (int h = 0; h < minRow.Length; h++) // находит наименьшую сумму
     {
-        if (maxRow[num] == max)
+        if (minRow[h] < min) min = minRow[h];
+    }
+
+    while (num < minRow.Length)
+    {
+        if (minRow[num] == min)
         {
             num++;
             break;
