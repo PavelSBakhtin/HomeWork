@@ -36,7 +36,7 @@ int[,] SelectionSort(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++) // все следующие циклы построчно
     {
-        for (int j = 0; j < array.GetLength(1); j++) // все следующие циклы в каждой строке
+        for (int j = 0; j < array.GetLength(1); j++) // все следующие циклы в каждом столбце одной строки
         {
             for (int count = 0; count < array.GetLength(1); count++) // счетчик чисел в строке
             {
