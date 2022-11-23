@@ -13,7 +13,7 @@ void PrintData(string msg)
     Console.WriteLine(msg);
 }
 
-void Numbers(int A) // рекурсия
+void Numbers(int A) // рекурсия для вывода всех натуральных от N до 1
 {
     while (A > 0)
     {
