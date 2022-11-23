@@ -12,7 +12,7 @@ void PrintData(string msg, int res)
     Console.WriteLine(msg + res);
 }
 
-int Numbers(int A, int B)
+int Numbers(int A, int B) // Сумма натуральных элементов в промежутке от M до N
 {
     int sum = 0;
     if (A > B)
