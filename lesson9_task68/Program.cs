@@ -12,7 +12,7 @@ void PrintData(string msg, int res)
     Console.WriteLine(msg + res);
 }
 
-int Ackerman(int a, int b)
+int Ackerman(int a, int b) // Функция Аккермана
 {
     if (a == 0)
     {
